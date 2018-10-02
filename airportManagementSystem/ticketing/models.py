@@ -9,9 +9,16 @@ class Person(models.Model):
     iD = models.CharField(primary_key=True, max_length=20)
     creditCard = models.CharField(max_length=20)
 
+    def __str__(self):
+        return self.name + " " + self.iD + " " + self.creditCard
+
 class Ticket(models.Model):
     startingPoint = models.CharField(max_length=20)
     destination = models.CharField(max_length=20)
     person = models.ForeignKey(Person, on_delete=models.CASCADE)
     time = models.CharField(max_length=10)
     price = models.IntegerField(default = 1000)
+
+    def __str__(self):
+        return self.person + " " + self.time + " " + self.startingPoint + " " + self.destination
+        

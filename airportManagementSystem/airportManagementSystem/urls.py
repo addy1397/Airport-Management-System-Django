@@ -18,6 +18,6 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 urlpatterns = [
-    url('ticketing/', include('ticketing.urls')),
+    url(r'^ticketing/', include('ticketing.urls')),
     url(r'^admin/', admin.site.urls),
 ]
