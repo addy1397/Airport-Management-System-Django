@@ -10,7 +10,7 @@ class Person(models.Model):
     creditCard = models.CharField(max_length=20)
 
     def __str__(self):
-        return self.name + " " + self.iD + " " + self.creditCard
+        return self.iD
 
 class Ticket(models.Model):
     startingPoint = models.CharField(max_length=20)
@@ -20,5 +20,4 @@ class Ticket(models.Model):
     price = models.IntegerField(default = 1000)
 
     def __str__(self):
-        return self.person + " " + self.time + " " + self.startingPoint + " " + self.destination
-        
+        return self.person.iD + " " + self.time + " " + self.startingPoint + " " + self.destination

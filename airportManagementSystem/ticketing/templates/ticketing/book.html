@@ -1,0 +1,25 @@
+<h1> HELLO WORLD, BOOK TICKETS </h1>
+
+<input id="start">
+<p>Enter starting point</p>
+
+<input id="des">
+<p>Enter destination</p>
+
+<input id="id">
+<p>Enter ID </p>
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p></p>
+
+<a href="http://127.0.0.1:8000/ticketing/" + id + "/">Click here to go home</a>
+
+<script>
+function myFunction() {
+    var start = document.getElementById("start").value;
+    var des = document.getElementById("des").value;
+    var id = document.getElementById("id").value;
+    window.location.replace("http://127.0.0.1:8000/ticketing/confirm/" + start + "/" + des + "/" + id + "/");
+}
+</script>

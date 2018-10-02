@@ -1,0 +1,19 @@
+
+{% if ticket %}
+  <ul>
+    {% for info in ticket %}
+      <li>
+        <a href="/ticketing/{{info.id}}/cancel/">
+        {{info}}
+      </a>
+      </li>
+    {% endfor %}
+  </ul>
+  <h3> Click on ticket to cancel</h3>
+{% else %}
+  <p>No Tickets Booked.</p>
+  <a href="/ticketing/book/">Click here to book one!</a>
+{% endif %}
+
+<p></p>
+<a href="http://127.0.0.1:8000/ticketing/" + id + "/">Click here to go home</a>
